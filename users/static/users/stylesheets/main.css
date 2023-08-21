@@ -1,0 +1,206 @@
+
+/*@import url("https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700&amp");*/
+/*@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp");*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    /* Dark mode */
+    /*--chat-color-pallet-0: rgb(0 0 0);*/ /* container background */
+    /*--chat-color-pallet-1: rgb(25 25 25);*/ /* main container color - nav */
+    /*--chat-color-pallet-2: rgb(55 55 55);*/ /* container_1 color */
+    /*--chat-color-pallet-3: rgb(0 93 146);*/ /* container_2 color */
+    /*--chat-color-pallet-4: rgb(222 222 222);*/ /* font color container_0 */
+    /*--chat-color-pallet-5: rgb(222 222 222);*/ /* font color container_1 */
+    /*--chat-color-pallet-6: rgb(222 222 222);*/ /* font color container_2 */
+    /*--chat-color-pallet-7: rgb(0 170 242);*/ /* active color - hover color */
+    /*--chat-color-pallet-8: rgb(0 0 0);*/ /* font color - when background color is active */
+    /*--chat-color-pallet-9: rgb(242 65 65);*/ /* font in-valid hover color */
+    /*--chat-color-pallet-10: rgb(222 222 222);*/ /* font in-valid hover text color */
+    /* Light mode */
+    --chat-color-pallet-00: rgb(220 230 246); /* page background */
+    --chat-color-pallet-0: linear-gradient(90deg, rgb(239, 242, 247) 0%, 7.60286%, rgb(237, 240, 249) 15.2057%, 20.7513%, rgb(235, 239, 248) 26.297%, 27.6386%, rgb(235, 239, 248) 28.9803%, 38.2826%, rgb(231, 237, 249) 47.585%, 48.1216%, rgb(230, 236, 250) 48.6583%, 53.1306%, rgb(228, 236, 249) 57.6029%, 61.5385%, rgb(227, 234, 250) 65.4741%, 68.7835%, rgb(222, 234, 250) 72.093%, 75.7603%, rgb(219, 230, 248) 79.4275%, 82.8265%, rgb(216, 229, 248) 86.2254%, 87.8354%, rgb(213, 228, 249) 89.4454%, 91.8605%, rgb(210, 226, 249) 94.2755%, 95.4383%, rgb(209, 225, 248) 96.6011%, 98.3005%, rgb(208, 224, 247) 100%); /* container background */
+    --chat-color-pallet-1: linear-gradient(130deg,rgb(208, 224, 247) 20%, rgb(208, 224, 247) 80%),linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)); /* main container color - nav */
+    --chat-color-pallet-2: linear-gradient(130deg,rgb(208, 224, 247) 20%, rgb(208, 224, 247) 80%),linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)); /* container_1 color */
+    --chat-color-pallet-3: linear-gradient(130deg, rgb(56 116 222) 20%, rgb(12 68 248) 80%),linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)); /* container_2 color */
+    --chat-color-pallet-4: rgb(0 0 0); /* font color container_0 */
+    --chat-color-pallet-5: rgb(0 0 0); /* font color container_1 */
+    --chat-color-pallet-6: rgb(222 222 222); /* font color container_2 */
+    --chat-color-pallet-7: linear-gradient(160deg, rgb(56 116 222) 20%, rgb(12 68 248) 80%),linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)); /* active color - hover color */
+    --chat-color-pallet-8: rgb(222 222 222); /* font color - when background color is active */
+    --chat-color-pallet-9: rgb(242 65 65); /* font in-valid hover color */
+    --chat-color-pallet-10: rgb(222 222 222); /* font in-valid hover text color */
+
+
+    --divice-output-content-background: var(--chat-color-pallet-2);
+    --body-background-color: var(--chat-color-pallet-00);
+    --body-background: var(--chat-color-pallet-0);
+    --font-color: var(--chat-color-pallet-7);
+    --font-family: 'Poppins', sans-serif;
+    --header-font-color: var(--chat-color-pallet-4);
+    --header-font-background: var(--chat-color-pallet-1);
+    --header-font-size: 14px;
+    --header-font-weight: 400;
+    --header-app-logo-font-size: 1.2em;
+    --header-app-logo-font-weight: 600;
+    --chat-box-background: var(--chat-color-pallet-0);
+    --chat-friend-message-color: var(--chat-color-pallet-2);
+    --chat-friend-message-font-color: var(--chat-color-pallet-5);
+    --chat-self-message-color: var(--chat-color-pallet-3);
+    --chat-self-message-font-color: var(--chat-color-pallet-6);
+    --chat-message-username-font-size: 14px;
+    --chat-message-username-font-weight: 500;
+    --chat-message-font-size: 14px;
+    --chat-message-font-weight: 400;
+    --chat-message-time-font-size: 10px;
+    --chat-message-time-font-weight: 400;
+    --input-container-font-color: var(--chat-color-pallet-10);
+    --input-container-font-size: 14px;
+    --input-container-font-weight: 600;
+    --input-container-background: var(--chat-color-pallet-1);
+    --input-message-background: var(--chat-color-pallet-3);
+    --input-message-font-color: var(--chat-color-pallet-6);
+    /* --input-message-hover-font-color: var(--chat-color-pallet-7); */
+    /* --input-message-hover-background: var(--chat-color-pallet-7); */
+    --input-send-background: var(--chat-color-pallet-3);
+    --input-send-font-color: var(--chat-color-pallet-6);
+    --input-send-hover-background: var(--chat-color-pallet-7);
+    --input-send-hover-font-color: var(--chat-color-pallet-8);
+    --scrollbar-track-color: var(--body-background);
+    --scrollbar-thumb-color: var(--chat-self-message-color);
+    --scrollbar-track-color-hover: var(--chat-self-message-color);
+    --scrollbar-thumb-color-hover: var(--body-background);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--body-background-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+}
+
+#content-container {
+    background: var(--body-background);
+    height: 100vh;
+    width: 100vw;
+    background: none;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: none;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: block;
+}
+
+#header-content {
+    font: var(--font-family);
+    color: var(--header-font-color);
+    font-size: var(--header-font-size);
+    font-size: var(--header-font-weight);
+    position: relative;
+    transition-property: background;
+    transition-duration: 0s;
+    transition-delay: 1.5s;
+    border-bottom: none;
+    transition-delay: 0s;
+    padding-inline-start: 0px;
+    background: var(--nav-background);
+    width: 100%;
+    height: 30px;
+    padding: 10px 0;
+    flex-grow: 0;
+}
+
+    a, #header-content a, #header-content a:hover {
+        text-decoration: none;
+    }
+
+nav {
+    display: block;
+}
+
+ul {
+    display: inline-block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+li {
+    display: list-item;
+    padding: 0 3px;
+    margin: 0 12px;
+    border-radius: 5px;
+    font-size: var(--header-font-size);
+    font-weight: var(--header-font-weight);
+    letter-spacing: initial;
+}
+
+.navigation {
+    padding: 0;
+    /* margin: 6px; */
+    border-bottom: none;
+    background: none;
+    overflow-y: inherit;
+}
+
+    .navigation .app {
+        float: left;
+    }
+
+    .navigation .user {
+        float: right;
+    }
+
+    .navigation li, .navigation a {
+        display: inline-block;
+    }
+
+    .navigation .app .logo {
+        font-size: var(--header-app-logo-font-size);
+        font-weight: var(--header-app-logo-font-weight);
+    }
+
+    .navigation, .navigation a, .navigation a:visited {
+        color: var(--nav-font-color);
+    }
+
+        .navigation, .navigation li {
+            line-height: 30px;
+        }
+
+            .navigation li {
+                vertical-align: middle;
+            }
+
+            .navigation .app {
+                text-transform: uppercase;
+            }
+
+            .navigation > ul li:is(:hover, :focus) {
+                transform: scale(1.1);
+            }
+
+/* .navigation li::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            display: block;
+            opacity: 0;
+            background: #174ae4;
+            margin-top: 3px;
+        }*/

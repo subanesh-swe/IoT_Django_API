@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title>{{ title }} - Subanesh_swe-world's Django Application</title>-->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index/content/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'index/content/site.css' %}" />
+    <script src="{% static 'index/scripts/modernizr-2.6.2.js' %}"></script>
+    <title>Subanesh_swe-world</title>
+    <style>
+        body {
+            color: white;
+            background-color: #464950;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input:not([type="checkbox"]):not([type="submit"]) {
+            height: 30px;
+            width: calc(100% - 10px);
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 200px;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn {
+            height: 40px;
+            width: 100px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+            .btn:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="form" id="ipForm" onsubmit="event.preventDefault(); formSubmitHandler(event, 'ipForm');">
+            <!--Design a Form using HTML & CSS
+            Employee Registration Form
+            1. Employee Name
+            2. Employee Id
+            3. Designation - Dropdown
+            4. Phone Number
+            5. Email ID
+            6. Date of Birth
+            7. Blood Group - Dropdown
+            8. District - Dropdown
+            9. Technical Skills - Checkbox-->
+            <h1>Employee Registration Form</h1>
+
+            <div class="form-group">
+                <label for="product">Enter Name</label>
+                <input type="text" placeholder="name" name="name" id="name" required="required">
+            </div>
+
+            <div class="form-group">
+                <label for="product">Enter Id</label>
+                <input type="text" placeholder="id" name="id" id="id" required="required">
+            </div>
+
+            <div class="form-group">
+                <label for="product">Enter Email</label>
+                <input type="email" placeholder="email" name="email" id="email" required="required">
+            </div>
+
+            <div class="form-group">
+                <label for="product">Enter Number</label>
+                <input type="number" placeholder="number" name="number" id="number" required="required">
+            </div>
+
+            <div class="form-group">
+                <label for="product">Enter Date of Birth</label>
+                <input type="text" placeholder="dob" name="dob" id="dob" required="required">
+            </div>
+
+            <div class="form-group">
+                <label for="designation">Select Designation</label>
+                <select id="designation">
+                    <option value="designation1">Designation 1</option>
+                    <option value="designation2">Designation 2</option>
+                    <option value="designation3">Designation 3</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="blood">Select Blood Group</label>
+                <select id="blood">
+                    <option value="blood1">Blood 1</option>
+                    <option value="blood2">Blood 2</option>
+                    <option value="blood3">Blood 3</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="district">Select District</label>
+                <select id="district">
+                    <option value="district1">District 1</option>
+                    <option value="district2">District 2</option>
+                    <option value="district3">District 3</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="skills">Select your skills:</label>
+                <div id="skills">
+                    <input type="checkbox" name="skill1" id="skill1" value="Python">
+                    <label for="skill1">Python</label><br>
+                    <input type="checkbox" name="skill2" id="skill2" value="Java">
+                    <label for="skill2">Java</label><br>
+                    <input type="checkbox" name="skill3" id="skill3" value="C">
+                    <label for="skill3">C</label><br>
+                    <input type="checkbox" name="skill4" id="skill4" value="HTML">
+                    <label for="skill4">HTML</label><br>
+                    <input type="checkbox" name="skill5" id="skill5" value="CSS">
+                    <label for="skill5">CSS</label><br>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <input type="submit" class="btn" onclick="submit" value="Submit" />
+            </div>
+        </form>
+
+        {% load static %}
+        <script src="{% static 'iohandler/scripts/formHandler.js' %}"></script>
+    </div>
+</body>
+</html>

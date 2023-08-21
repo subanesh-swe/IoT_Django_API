@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/stylesheets/login.css' %}" />
+    <style>
+        :root {
+            --form-height: 600px;
+            --form-width: 380px;
+            /* --form-input-margin-top: 25px; */
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+    <div class="form-container">
+        <form class="form" id="signinForm" onsubmit="formSubmitHandler(event, 'signinForm');">
+            <div class="form-content">
+                <h2>Signin</h2>
+                {% csrf_token %}
+                <div class="inputBox">
+                    <input id="email" type="email" name="email" maxlength="56" oninput="chechInputLengthValidity( this, 'warningLabelEmail' )" placeholder=" " required="required" />
+                    <label for="email">Email</label>
+                    <warningLabel id="warningLabelEmail"></warningLabel>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input id="username" type="text" name="username" maxlength="26" oninput="chechInputLengthValidity( this, 'warningLabelUsername' )" placeholder=" " required="required" />
+                    <label for="username">Username</label>
+                    <warningLabel id="warningLabelUsername"></warningLabel>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input id="password1" type="password" name="password1" maxlength="26" oninput="chechInputLengthValidity( this, 'warningLabelPassword1' )" placeholder=" " required="required" />
+                    <label for="password1">Password</label>
+                    <warningLabel id="warningLabelPassword1"></warningLabel>
+                    <eyeBtn id="eye-btn-1" class="eye" onclick="togglePassword( 'eye-btn-1', 'password1' )"></eyeBtn>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input id="password2" type="password" name="password2" maxlength="26" oninput="chechInputLengthValidity( this, 'warningLabelPassword2' )" placeholder=" " required="required" />
+                    <label for="password2">Confirm Password</label>
+                    <warningLabel id="warningLabelPassword2"></warningLabel>
+                    <eyeBtn id="eye-btn-2" class="eye" onclick="togglePassword( 'eye-btn-2', 'password2' )"></eyeBtn>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a href="#">Forgot Password</a>
+                    <a href="{% url 'login' %}">Login</a>
+                </div>
+                <input type="submit" value="Signin" />
+            </div>
+        </form>
+    </div>
+
+
+    {% load static %}
+    <script src="{% static 'users/scripts/formHandler.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+django>=3.2.14				### tzdata, sqlparse, asgiref, django
+daphne>=4.0.0				### twisted-iocpsupport, incremental, constantly, typing-extensions, txaio, six, setuptools, pycparser, pyasn1, idna, attrs, zope.interface, pyasn1-modules, hyperlink, cffi, Automat, twisted, cryptography, service-identity, pyopenssl, autobahn, daphne
+python-socketio>=5.8.0		### python-engineio, bidict, python-socketio
+
+django-cors-headers
+djangorestframework			### pytz, djangorestframework
+gunicorn					### packaging, gunicorn
