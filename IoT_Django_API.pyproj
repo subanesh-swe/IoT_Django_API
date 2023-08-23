@@ -83,6 +83,7 @@
     <Compile Include="users\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="index\migrations\__pycache__\__init__.cpython-311.pyc" />
     <Content Include="index\static\index\content\bootstrap.css" />
     <Content Include="index\static\index\content\bootstrap.min.css" />
